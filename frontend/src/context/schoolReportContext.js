@@ -19,6 +19,15 @@ export const schoolReportsReducer = (state, action) => {
           (report) => report._id !== action.payload._id
         ),
       };
+    case "UPDATE_REPORT":
+      return {
+        reports: state.reports.map((report) => {
+          if (report._id === action.payload._id) {
+            return action.payload;
+          }
+          return report;
+        }),
+      };
     default:
       return state;
   }

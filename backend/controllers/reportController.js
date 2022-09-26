@@ -83,9 +83,8 @@ const updateReport = async (req, res) => {
 
   const report = await Report.findOneAndUpdate(
     { _id: id },
-    {
-      ...req.body,
-    }
+    { ...req.body },
+    { new: true }
   );
 
   if (!report) {

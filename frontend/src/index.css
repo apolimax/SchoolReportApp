@@ -37,6 +37,10 @@ header a {
   text-decoration: none;
 }
 
+header a:hover {
+  text-decoration: underline;
+}
+
 .pages {
   max-width: 1400px;
   padding: 20px;
@@ -57,6 +61,10 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .workout-details:nth-child(1) {
@@ -75,15 +83,22 @@ header a {
   color: #555;
 }
 
-.workout-details span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.material-symbols-outlined {
   cursor: pointer;
   background: #f1f1f1;
   padding: 6px;
   border-radius: 50%;
   color: #333;
+
+  border: none;
+}
+
+.material-symbols-outlined:nth-child(1) {
+  margin-right: 10px;
+}
+
+.material-symbols-outlined:hover {
+  background: #b9b3b3;
 }
 
 @media (max-width: 650px) {
@@ -184,11 +199,15 @@ nav button:hover {
 /* auth forms */
 form.signup,
 form.login {
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 5%);
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 form.signup h3,
@@ -199,4 +218,51 @@ form.login h3 {
 form.signup label,
 form.login label {
   margin-bottom: 10px;
+}
+
+form.signup button,
+form.login button {
+  align-self: flex-end;
+}
+
+/* edit modal */
+.overlay {
+  background: rgba(0 0 0 / 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  placeitems: center;
+  overflowy: auto;
+}
+
+.edit-content {
+  width: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 5%);
+}
+
+.edit-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-content .cancel-edit {
+  background-color: var(--error);
+  color: #fff;
+}
+
+.edit-form-buttons {
+  display: flex;
+  align-self: flex-end;
+  gap: 4px;
 }
