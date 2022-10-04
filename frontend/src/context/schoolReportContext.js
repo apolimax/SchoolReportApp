@@ -1,7 +1,7 @@
 import { createContext, useEffect, useReducer } from "react";
 import { useAuthContext } from "../hooks/useAuthtContext";
 
-export const schoolReportContext = createContext();
+export const SchoolReportContext = createContext();
 
 export const schoolReportsReducer = (state, action) => {
   switch (action.type) {
@@ -60,8 +60,8 @@ export const SchoolReportContextProvider = ({ children }) => {
   }, [dispatch, user]);
 
   return (
-    <schoolReportContext.Provider value={{ ...state, dispatch }}>
+    <SchoolReportContext.Provider value={{ ...state, dispatch }}>
       {children}
-    </schoolReportContext.Provider>
+    </SchoolReportContext.Provider>
   );
 };

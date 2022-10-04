@@ -59,7 +59,7 @@ const ReportForm = () => {
 
         <label htmlFor="grade">Grade</label>
         <input
-          type="number"
+          type="text"
           id="grade"
           onChange={(e) => setGrade(e.target.value)}
           value={grade}

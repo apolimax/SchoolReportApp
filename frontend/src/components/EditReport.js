@@ -15,7 +15,7 @@ function EditReport({ subject, grade, reportId, openModal }) {
     e.preventDefault();
 
     if (!subjectValue.trim() || !gradeValue) {
-      setError("You must be logged in");
+      setError("Subject and grade are required");
       return;
     }
 
@@ -58,7 +58,7 @@ function EditReport({ subject, grade, reportId, openModal }) {
       />
       <label htmlFor="grade">Grade</label>
       <input
-        type="number"
+        type="text"
         id="grade"
         value={gradeValue}
         onChange={(e) => setGradeValue(e.target.value)}

@@ -51,3 +51,9 @@ npm i
 
 - Copy the file `./backend/.env.example` and set the environment variables
 - Run the scripts located in each package.json project file
+
+## Run the frontend tests
+
+```
+npm run test
+```

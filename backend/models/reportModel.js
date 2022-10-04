@@ -9,7 +9,7 @@ const schoolReportSchema = new Schema(
       required: true,
     },
     grade: {
-      type: Number,
+      type: String,
       required: true,
     },
     user_id: {

@@ -1,8 +1,8 @@
-import { schoolReportContext } from "../context/schoolReportContext";
+import { SchoolReportContext } from "../context/schoolReportContext";
 import { useContext } from "react";
 
 export const useSchoolReportContext = () => {
-  const context = useContext(schoolReportContext);
+  const context = useContext(SchoolReportContext);
 
   if (!context) {
     throw Error(
