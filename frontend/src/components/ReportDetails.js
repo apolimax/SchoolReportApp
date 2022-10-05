@@ -2,7 +2,7 @@ import EditReportModal from "./EditReportModal";
 
 const ReportDetails = ({ report, handleClick }) => {
   return (
-    <div className="workout-details">
+    <li className="workout-details">
       <div>
         <h4>{report.subject}</h4>
         <p>
@@ -22,7 +22,7 @@ const ReportDetails = ({ report, handleClick }) => {
           delete
         </button>
       </div>
-    </div>
+    </li>
   );
 };
 

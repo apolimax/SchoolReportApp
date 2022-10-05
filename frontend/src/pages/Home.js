@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="workouts">
+      <ul className="workouts">
         {reports &&
           reports.map((report) => (
             <ReportDetails
@@ -35,7 +35,7 @@ const Home = () => {
               handleClick={handleDeleteReport}
             />
           ))}
-      </div>
+      </ul>
       <ReportForm />
     </div>
   );
